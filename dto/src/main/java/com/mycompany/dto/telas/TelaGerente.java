@@ -50,27 +50,18 @@ public class TelaGerente extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Tela de Gerenciamento");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(140, 6, 350, 50);
-
-        jTextField1.setText("jTextField1");
         getContentPane().add(jTextField1);
         jTextField1.setBounds(147, 95, 156, 51);
-
-        jTextField2.setText("jTextField2");
         getContentPane().add(jTextField2);
         jTextField2.setBounds(147, 164, 156, 45);
-
-        jTextField3.setText("jTextField3");
         getContentPane().add(jTextField3);
         jTextField3.setBounds(147, 227, 156, 44);
-
-        jTextField4.setText("jTextField4");
         getContentPane().add(jTextField4);
         jTextField4.setBounds(150, 290, 156, 46);
-
-        jTextField5.setText("jTextField5");
         getContentPane().add(jTextField5);
         jTextField5.setBounds(147, 353, 156, 46);
 
@@ -92,7 +83,7 @@ public class TelaGerente extends javax.swing.JFrame {
 
         jLabel6.setText("V. Compra");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(22, 356, 93, 40);
+        jLabel6.setBounds(30, 360, 93, 40);
 
         jLabel7.setText("V. Venda");
         getContentPane().add(jLabel7);
@@ -109,20 +100,12 @@ public class TelaGerente extends javax.swing.JFrame {
         jLabel10.setText("Garantia");
         getContentPane().add(jLabel10);
         jLabel10.setBounds(366, 306, 70, 40);
-
-        jTextField6.setText("jTextField6");
         getContentPane().add(jTextField6);
         jTextField6.setBounds(458, 95, 110, 51);
-
-        jTextField7.setText("jTextField7");
         getContentPane().add(jTextField7);
         jTextField7.setBounds(470, 167, 100, 40);
-
-        jTextField8.setText("jTextField8");
         getContentPane().add(jTextField8);
         jTextField8.setBounds(470, 230, 100, 40);
-
-        jTextField9.setText("jTextField9");
         getContentPane().add(jTextField9);
         jTextField9.setBounds(470, 310, 100, 40);
 
