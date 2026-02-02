@@ -23,7 +23,7 @@ public class Dto {
             new TelaCliente().setVisible(true);
         });
         
-        //System.out.println(cliente.getPreco());
+        System.out.println(cliente.getPreco());
     }
     
  
