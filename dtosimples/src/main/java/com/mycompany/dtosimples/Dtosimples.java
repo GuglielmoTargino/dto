@@ -16,6 +16,6 @@ public class Dtosimples {
         Calcado tenis = new Calcado("esporte", "azul", "mizuno", 126.56, 127.2, 5.6, 2.3, 500, 12, 38);
         
         
-        System.out.println(tenis.getValorCompra());
+        System.out.println(tenis.getEstoque());
     }
 }
