@@ -6,6 +6,7 @@ package com.mycompany.dto;
 import com.mycompany.dto.entidades.Calcado;
 import com.mycompany.dto.entidades.VisaoCliente;
 import com.mycompany.dto.telas.TelaCliente;
+import com.mycompany.dto.telas.TelaGerente;
 
 /**
  *
@@ -20,7 +21,7 @@ public class Dto {
         VisaoCliente cliente= new VisaoCliente(tenis); 
         
          java.awt.EventQueue.invokeLater(() -> {
-            new TelaCliente().setVisible(true);
+            new TelaGerente().setVisible(true);
         });
         
         System.out.println(cliente.getPreco());

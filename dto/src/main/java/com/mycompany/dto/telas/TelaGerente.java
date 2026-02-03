@@ -52,68 +52,97 @@ public class TelaGerente extends javax.swing.JFrame {
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Tela de Gerenciamento");
+        jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel1);
         jLabel1.setBounds(140, 6, 350, 50);
+
+        jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jTextField1);
         jTextField1.setBounds(147, 95, 156, 51);
+
+        jTextField2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jTextField2);
         jTextField2.setBounds(147, 164, 156, 45);
+
+        jTextField3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jTextField3);
         jTextField3.setBounds(147, 227, 156, 44);
+
+        jTextField4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jTextField4);
         jTextField4.setBounds(150, 290, 156, 46);
+
+        jTextField5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jTextField5);
         jTextField5.setBounds(147, 353, 156, 46);
 
         jLabel2.setText("Modelo");
+        jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel2);
         jLabel2.setBounds(22, 96, 93, 50);
 
         jLabel3.setText("Tamanho");
+        jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel3);
         jLabel3.setBounds(22, 164, 93, 40);
 
         jLabel4.setText("Cor");
+        jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel4);
         jLabel4.setBounds(22, 227, 93, 40);
 
         jLabel5.setText("Fabricante");
+        jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel5);
         jLabel5.setBounds(30, 290, 93, 40);
 
         jLabel6.setText("V. Compra");
+        jLabel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel6);
         jLabel6.setBounds(30, 360, 93, 40);
 
         jLabel7.setText("V. Venda");
+        jLabel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel7);
         jLabel7.setBounds(366, 96, 66, 50);
 
         jLabel8.setText("Estoque");
+        jLabel8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel8);
         jLabel8.setBounds(370, 170, 66, 40);
 
         jLabel9.setText("ICMS");
+        jLabel9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel9);
         jLabel9.setBounds(370, 230, 70, 40);
 
         jLabel10.setText("Garantia");
+        jLabel10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel10);
         jLabel10.setBounds(366, 306, 70, 40);
+
+        jTextField6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jTextField6);
         jTextField6.setBounds(458, 95, 110, 51);
+
+        jTextField7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jTextField7);
-        jTextField7.setBounds(470, 167, 100, 40);
+        jTextField7.setBounds(520, 167, 50, 40);
+
+        jTextField8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jTextField8);
         jTextField8.setBounds(470, 230, 100, 40);
+
+        jTextField9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jTextField9);
         jTextField9.setBounds(470, 310, 100, 40);
 
         jButton1.setText("Buscar");
+        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jButton1);
         jButton1.setBounds(500, 411, 105, 43);
 
-        pack();
+        setBounds(0, 0, 692, 496);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
