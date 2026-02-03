@@ -12,8 +12,10 @@ import com.mycompany.dtosimples.entities.Calcado;
 public class Dtosimples {
 
     public static void main(String[] args) {
-        Calcado tenis= new Calcado("Mizuno","Azul", " Doran", 125.56, 126.3, 5.6, 200, 38,12);
         
-        System.out.println(tenis.getEstoque());
+        Calcado tenis = new Calcado("esporte", "azul", "mizuno", 126.56, 127.2, 5.6, 2.3, 500, 12, 38);
+        
+        
+        System.out.println(tenis.getValorCompra());
     }
 }

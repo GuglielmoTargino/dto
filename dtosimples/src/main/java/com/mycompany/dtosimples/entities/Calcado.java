@@ -15,20 +15,22 @@ public class Calcado {
     Double valorCompra;
     Double valorVenda;
     Double icms;
+    Double lucro;
     int estoque;
-    int tamanho;
     int garantia;
+    int tamanho;
 
-    public Calcado(String modelo, String cor, String fabricante, Double valorCompra, Double valorVenda, Double icms, int estoque, int tamanho, int garantia) {
+    public Calcado(String modelo, String cor, String fabricante, Double valorCompra, Double valorVenda, Double icms, Double lucro, int estoque, int garantia, int tamanho) {
         this.modelo = modelo;
         this.cor = cor;
         this.fabricante = fabricante;
         this.valorCompra = valorCompra;
         this.valorVenda = valorVenda;
         this.icms = icms;
+        this.lucro = lucro;
         this.estoque = estoque;
-        this.tamanho = tamanho;
         this.garantia = garantia;
+        this.tamanho = tamanho;
     }
 
     public String getModelo() {
@@ -79,20 +81,20 @@ public class Calcado {
         this.icms = icms;
     }
 
+    public Double getLucro() {
+        return lucro;
+    }
+
+    public void setLucro(Double lucro) {
+        this.lucro = lucro;
+    }
+
     public int getEstoque() {
         return estoque;
     }
 
     public void setEstoque(int estoque) {
         this.estoque = estoque;
-    }
-
-    public int getTamanho() {
-        return tamanho;
-    }
-
-    public void setTamanho(int tamanho) {
-        this.tamanho = tamanho;
     }
 
     public int getGarantia() {
@@ -102,7 +104,14 @@ public class Calcado {
     public void setGarantia(int garantia) {
         this.garantia = garantia;
     }
-    
+
+    public int getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(int tamanho) {
+        this.tamanho = tamanho;
+    }
     
     
     
