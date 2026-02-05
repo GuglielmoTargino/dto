@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.dto.entidades;
+package com.mycompany.dto.dtos;
+
+import com.mycompany.dto.entidades.Calcado;
 
 /**
  *
@@ -33,7 +35,5 @@ public class VisaoCliente {
     public void setPreco(Double preco) {
         this.preco = preco;
     }
-    
-    
     
 }
