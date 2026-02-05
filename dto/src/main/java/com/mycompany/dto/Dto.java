@@ -5,7 +5,7 @@
 package com.mycompany.dto;
 import com.mycompany.dto.entidades.Calcado;
 import com.mycompany.dto.dtos.VisaoCliente;
-import com.mycompany.dto.telas.TelaCliente;
+//import com.mycompany.dto.telas.TelaCliente;
 import com.mycompany.dto.telas.TelaGerente;
 
 /**
