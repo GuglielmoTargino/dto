@@ -21,10 +21,10 @@ public class Dto {
         VisaoCliente cliente= new VisaoCliente(tenis); 
         
          java.awt.EventQueue.invokeLater(() -> {
-            new TelaGerente().setVisible(true);
+            new TelaGerente().setVisible(false);
         });
         
-        System.out.println(cliente.getPreco());
+        System.out.println(cliente.getModelo());
     }
     
  
