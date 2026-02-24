@@ -11,4 +11,19 @@
         <maven.compiler.target>21</maven.compiler.target>
         <exec.mainClass>com.mycompany.dtosimples.Dtosimples</exec.mainClass>
     </properties>
+    
+    
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc11</artifactId>
+            <version>21.11.0.0</version>
+        </dependency>
+
+    </dependencies>  
+    
+    
+    
+    
 </project>

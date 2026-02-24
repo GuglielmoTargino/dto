@@ -3,6 +3,7 @@
  */
 
 package com.mycompany.dtosimples;
+import com.mycompany.dtosimples.conexao.ConexaoBanco;
 import com.mycompany.dtosimples.entities.Calcado;
 
 /**
@@ -13,9 +14,9 @@ public class Dtosimples {
 
     public static void main(String[] args) {
         
-        Calcado tenis = new Calcado("esporte", "azul","mizuno", 125.86, 126.2, 5.6, 5.3, 500, 12,38);
+        //Calcado tenis = new Calcado("corrida","esporte", "azul","mizuno", 125.86, 126.2, 5.6, 5.3, 500, 12,38);
         
-        
-        System.out.println(tenis.getFabricante());
+        ConexaoBanco.fazerConexao();
+       
     }
 }
