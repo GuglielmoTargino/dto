@@ -26,7 +26,7 @@ public class ConexaoBanco {
             
             Connection conn = DriverManager.getConnection(url,user,pass);
             
-            System.out.println("Conexão OK");
+            System.out.println("Conexão OK Sucesso");
             
             return conn;        
         
