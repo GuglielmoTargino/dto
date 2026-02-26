@@ -17,7 +17,7 @@ public class ConexaoBanco {
     
     private static final String url= "jdbc:oracle:thin:@localhost:1521/XE";
     private static final String user= "ght";
-    private static final String pass= "400";
+    private static final String pass= "4004";
     
     public static Connection fazerConexao(){
         
