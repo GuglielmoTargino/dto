@@ -10,7 +10,12 @@ package com.mycompany.dtosimples.entities;
  */
 public class Calcado {
     
-
+    int id;
+    String nome;
+    
+  
+    
+      
     String modelo;
     String cor;
     String fabricante;
@@ -24,8 +29,10 @@ public class Calcado {
     int garantia;
     int tamanho;
 
-    public Calcado(String modelo, String cor, String fabricante, Double valorCompra, Double valorVenda, Double icms, Double lucro, int estoque, int garantia, int tamanho) {
+    public Calcado(int id, String nome, String modelo, String cor, String fabricante, Double valorCompra, Double valorVenda, Double icms, Double lucro, int estoque, int garantia, int tamanho) {
        
+        this.id=id;
+        this.nome=nome;
         this.modelo = modelo;
         this.cor = cor;
         this.fabricante = fabricante;
@@ -36,14 +43,32 @@ public class Calcado {
         this.estoque = estoque;
         this.garantia = garantia;
         this.tamanho = tamanho;
+    } 
+    
+    
+   
+    public int getId(){ 
+    return id;
     }
     
+    public void setId(int id){
+        this.id=id;
+    }
     
-     
+    public String getNome(){
+        return nome;
     
     
+    }
     
-
+    public void setNome(String nome){
+        
+        this.nome=nome;
+    
+    }
+   
+    
+    
     public String getModelo() {
         return modelo;
     }
