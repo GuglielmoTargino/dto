@@ -21,12 +21,18 @@ public class Dtosimples {
         
         Crud crud = new Crud();
         
-        Calcado calcado=new Calcado(3,"Sapato","social","preto","MTK",120.56,150.45,5.6,89.56,500,11,38);
+       //Calcado calcado=new Calcado(3,"Sapato","social","preto","MTK",120.56,150.45,5.6,89.56,500,11,38);
         
-        crud.inserir(calcado);
+       //crud.inserir(calcado);
+       
+       crud.excluir(1);   
         
         
-        //ConexaoBanco.fazerConexao();
+        
+        
+        
+        
+        
          
     }
 }

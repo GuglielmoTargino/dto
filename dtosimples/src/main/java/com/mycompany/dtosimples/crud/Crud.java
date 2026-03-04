@@ -40,31 +40,118 @@ public class Crud {
              ps.executeUpdate();
              
              System.out.println("Cadastro com Sucesso!");
-            
-            
-            
-        
-        
-        
-        
+           
         
         }catch(SQLException e){
             
             System.err.println("Casdastro Falhou!");
         
+        }
+    
+    }
+    
+    
+    
+    public void excluir(int id){
+        
+        
+        String sql="DELETE FROM calcado where id=?";
+        
+        try{
+            
+            Connection conn=ConexaoBanco.fazerConexao();
+            PreparedStatement ps=conn.prepareStatement(sql);
+            
+            ps.setInt(1, id);
+            
+            ps.executeUpdate();
+            
+            
+            System.out.println("Item excluido com sucesso!");
+        
+        
+        }catch(SQLException e){
+            
+            System.err.println("Falha de operação!");
         
         
         }
         
-        
-        
-        
-       
-    
-    
-    
-    
+
     }
+   
+
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
