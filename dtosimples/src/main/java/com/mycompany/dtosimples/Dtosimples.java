@@ -25,12 +25,10 @@ public class Dtosimples {
         
        //crud.inserir(calcado);
        
-       crud.excluir(1);   
-        
-        
-        
-        
-        
+       crud.excluir(1);
+       
+       
+       
         
         
          
