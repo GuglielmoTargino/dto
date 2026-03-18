@@ -3,7 +3,6 @@
  */
 
 package com.mycompany.dtosimples;
-import com.mycompany.dtosimples.conexao.ConexaoBanco;
 import com.mycompany.dtosimples.crud.Crud;
 import com.mycompany.dtosimples.entities.Calcado;
 

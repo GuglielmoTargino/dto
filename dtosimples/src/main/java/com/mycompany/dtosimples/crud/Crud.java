@@ -134,7 +134,7 @@ public class Crud {
         
         Connection conn = ConexaoBanco.fazerConexao();
         PreparedStatement ps=conn.prepareStatement(sql);
-        ResultSet rs=ps.executeQuery(sql);
+        ResultSet rs=ps.executeQuery();
         
         while (rs.next()){
             
@@ -165,18 +165,6 @@ public class Crud {
     return lista;
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     public Calcado buscarId(){
          
         String sql ="SELECT * FROM Calcado where id=1";
