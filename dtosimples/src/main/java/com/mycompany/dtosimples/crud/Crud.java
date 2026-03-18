@@ -7,7 +7,11 @@ import com.mycompany.dtosimples.entities.Calcado;
 import java.sql.Connection;
 import com.mycompany.dtosimples.conexao.ConexaoBanco;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  *
@@ -50,8 +54,6 @@ public class Crud {
     
     }
     
-    
-    
     public void excluir(int id){
         
         
@@ -66,7 +68,6 @@ public class Crud {
             
             ps.executeUpdate();
             
-            
             System.out.println("Item excluido com sucesso!");
         
         
@@ -76,12 +77,8 @@ public class Crud {
         
         
         }
-        
 
     }
-    
-
-    
     
     public void atualizar(Calcado c){
         String sql="UPDATE calcado SET nome=?, modelo=?, cor=?, fabricante=?,"+
@@ -126,6 +123,121 @@ public class Crud {
     
     
     
+ 
+    public List<Calcado> buscar(){
+        
+        List<Calcado> lista = new ArrayList<>();
+        
+        String sql ="SELECT * FROM Calcado where id=1";
+        
+        try{
+        
+        Connection conn = ConexaoBanco.fazerConexao();
+        PreparedStatement ps=conn.prepareStatement(sql);
+        ResultSet rs=ps.executeQuery(sql);
+        
+        while (rs.next()){
+            
+            lista.add(new Calcado(
+                    rs.getInt("id"),
+                    rs.getString("nome"),
+                    rs.getString("modelo"),
+                    rs.getString("cor"),
+                    rs.getString("fabricante"),
+                    rs.getDouble("valorcompra"),
+                    rs.getDouble("valorvenda"),
+                    rs.getDouble("icms"),
+                    rs.getDouble("lucro"),
+                    rs.getInt("estoque"),
+                    rs.getInt("garantia"),
+                    rs.getInt("tamanho")
+                    
+            ));
+        
+        }
+        
+        }catch(SQLException e){
+            
+            System.err.println("falaha de operação.");
+        
+        }
+    
+    return lista;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public Calcado buscarId(){
+         
+        String sql ="SELECT * FROM Calcado where id=1";
+        Calcado listaitem = null;
+
+        try{
+        
+        Connection conn = ConexaoBanco.fazerConexao();
+        PreparedStatement ps=conn.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        
+        
+        if(rs.next()){
+            
+              listaitem = new Calcado(
+                    rs.getInt("id"),
+                    rs.getString("nome"),
+                    rs.getString("modelo"),
+                    rs.getString("cor"),
+                    rs.getString("fabricante"),
+                    rs.getDouble("valorcompra"),
+                    rs.getDouble("valorvenda"),
+                    rs.getDouble("icms"),
+                    rs.getDouble("lucro"),
+                    rs.getInt("estoque"),
+                    rs.getInt("garantia"),
+                    rs.getInt("tamanho")
+                    
+            );
+              
+              System.out.println(
+                       listaitem.getId()+" - "+
+                        listaitem.getNome()+" - "+
+                      listaitem.getModelo()+" - "+
+                       listaitem.getCor()+" - "+
+                       listaitem.getFabricante()+" - "+
+                        listaitem.getValorCompra()+" - "+
+                        listaitem.getValorVenda()+" - "+
+                        listaitem.getIcms()+" - "+
+                        listaitem.getLucro()+" - "+
+                        listaitem.getEstoque()+" - "+
+                        listaitem.getGarantia()+" - "+
+                        listaitem.getTamanho()
+                       
+                       
+       
+       
+       );
+      
+            
+        }
+    
+        }catch(SQLException e){
+            
+            System.err.println("falaha de operação.");
+        
+        }
+    
+    return listaitem;
+    }
+
     
     
     
@@ -175,17 +287,4 @@ public class Crud {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-}//Fechamento de classe aqui
+}//Fechamento de classe Crud aqui
