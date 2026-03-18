@@ -79,16 +79,50 @@ public class Crud {
         
 
     }
-   
+    
 
     
-   
     
+    public void atualizar(Calcado c){
+        String sql="UPDATE calcado SET nome=?, modelo=?, cor=?, fabricante=?,"+
+                "valorcompra=?, valorvenda=?, icms=?, lucro=?, estoque=?, garantia=?, tamanho=? where id=?";
+        
+        try{
+        Connection conn=ConexaoBanco.fazerConexao();
+        PreparedStatement ps = conn.prepareStatement(sql);
+        
+             
+             ps.setString(1,c.getNome());
+             ps.setString(2,c.getModelo());
+             ps.setString(3,c.getCor());
+             ps.setString(4,c.getFabricante());
+             ps.setDouble(5,c.getValorCompra());
+             ps.setDouble(6,c.getValorVenda());
+             ps.setDouble(7,c.getIcms());
+             ps.setDouble(8,c.getLucro());
+             ps.setInt(9,c.getEstoque());
+             ps.setInt(10,c.getGarantia());
+             ps.setInt(11,c.getTamanho());
+             ps.setInt(12, c.getId());
+        
+             ps.executeUpdate();
+             
+             System.out.println("Item alterado com Sucessso!");
+        
+        
+        
+        }catch( SQLException e){
+            
+            System.err.println("Falha de operação!");
+        
+        
+        }
     
     
     
     
     
+    }
     
     
     
@@ -154,7 +188,4 @@ public class Crud {
     
     
     
-    
-    
-    
-}
+}//Fechamento de classe aqui
