@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
 /**
  *
  * @author GHT
@@ -124,112 +125,58 @@ public class Crud {
     
     
  
+    
+    
     public List<Calcado> buscar(){
         
         List<Calcado> lista = new ArrayList<>();
+        String sql = "SELECT * FROM calcado";
         
-        String sql ="SELECT * FROM Calcado where id=1";
+        
         
         try{
-        
-        Connection conn = ConexaoBanco.fazerConexao();
-        PreparedStatement ps=conn.prepareStatement(sql);
-        ResultSet rs=ps.executeQuery();
-        
-        while (rs.next()){
             
-            lista.add(new Calcado(
-                    rs.getInt("id"),
-                    rs.getString("nome"),
-                    rs.getString("modelo"),
-                    rs.getString("cor"),
-                    rs.getString("fabricante"),
-                    rs.getDouble("valorcompra"),
-                    rs.getDouble("valorvenda"),
-                    rs.getDouble("icms"),
-                    rs.getDouble("lucro"),
+            Connection conn = ConexaoBanco.fazerConexao();
+            PreparedStatement ps =conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            
+            
+            while(rs.next()){
+                
+                
+                lista.add(new Calcado(
+                        rs.getInt("id"),
+                        rs.getString("nome"),
+                        rs.getString("modelo"),
+                        rs.getString("cor"),
+                        rs.getString("fabricante"),
+                        rs.getDouble("valorcompra"),
+                        rs.getDouble("valorvenda"),
+                        rs.getDouble("icms"),
+                        rs.getDouble("lucro"),
                     rs.getInt("estoque"),
-                    rs.getInt("garantia"),
-                    rs.getInt("tamanho")
-                    
-            ));
+                        rs.getInt("garantia"),
+                        rs.getInt("tamanho")
+            
+                
+                ));
+                
+      
+            }
         
-        }
         
         }catch(SQLException e){
             
-            System.err.println("falaha de operação.");
+            System.err.println("Falha de operação!");
+        
+       
         
         }
+        
     
     return lista;
+    
     }
-
-    public Calcado buscarId(){
-         
-        String sql ="SELECT * FROM Calcado where id=1";
-        Calcado listaitem = null;
-
-        try{
-        
-        Connection conn = ConexaoBanco.fazerConexao();
-        PreparedStatement ps=conn.prepareStatement(sql);
-        ResultSet rs = ps.executeQuery();
-        
-        
-        if(rs.next()){
-            
-              listaitem = new Calcado(
-                    rs.getInt("id"),
-                    rs.getString("nome"),
-                    rs.getString("modelo"),
-                    rs.getString("cor"),
-                    rs.getString("fabricante"),
-                    rs.getDouble("valorcompra"),
-                    rs.getDouble("valorvenda"),
-                    rs.getDouble("icms"),
-                    rs.getDouble("lucro"),
-                    rs.getInt("estoque"),
-                    rs.getInt("garantia"),
-                    rs.getInt("tamanho")
-                    
-            );
-              
-              System.out.println(
-                       listaitem.getId()+" - "+
-                        listaitem.getNome()+" - "+
-                      listaitem.getModelo()+" - "+
-                       listaitem.getCor()+" - "+
-                       listaitem.getFabricante()+" - "+
-                        listaitem.getValorCompra()+" - "+
-                        listaitem.getValorVenda()+" - "+
-                        listaitem.getIcms()+" - "+
-                        listaitem.getLucro()+" - "+
-                        listaitem.getEstoque()+" - "+
-                        listaitem.getGarantia()+" - "+
-                        listaitem.getTamanho()
-                       
-                       
-       
-       
-       );
-      
-            
-        }
-    
-        }catch(SQLException e){
-            
-            System.err.println("falaha de operação.");
-        
-        }
-    
-    return listaitem;
-    }
-
-    
-    
-    
-    
     
     
     

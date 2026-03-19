@@ -28,33 +28,36 @@ public class Dtosimples {
        
        //crud.atualizar(calcado);
        
-  
-       
        crud.buscar().forEach(x->
                
+               
+               
+               
                System.out.println(
-                       x.getId()+" - "+
-                       x.getNome()+" - "+
-                       x.getModelo()+" - "+
-                       x.getCor()+" - "+
-                       x.getFabricante()+" - "+
-                       x.getValorCompra()+" - "+
-                       x.getValorVenda()+" - "+
-                       x.getIcms()+" - "+
-                       x.getLucro()+" - "+
-                       x.getEstoque()+" - "+
-                       x.getGarantia()+" - "+
+                       x.getId()+" ID "+
+                       x.getNome()+
+                       x.getModelo()+
+                       x.getCor()+
+                       x.getFabricante()+
+                       x.getValorCompra()+
+                       x.getValorVenda()+
+                       x.getIcms()+
+                       x.getLucro()+
+                       x.getEstoque()+
+                       x.getGarantia()+
                        x.getTamanho()
-                       
-                       )
-       
+      
+               
+               )
+    
        
        );
-       
+               
+      
      
    
      
-      // crud.buscarId();
+      
        
      
          
