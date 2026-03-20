@@ -5,7 +5,7 @@
 package com.mycompany.dtosimples;
 import com.mycompany.dtosimples.crud.Crud;
 import com.mycompany.dtosimples.entities.Calcado;
-import com.mycompany.dtosimples.dtos.Usuario;
+
 
 
 

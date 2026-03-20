@@ -155,15 +155,8 @@ public class Crud {
     return lista;
     
     }
-    
-    
-    
-    
-    
-    
+   
     ///////////////////////////////////////////////////////////////////////
-    
-    
     
     public List<Usuario> buscarUsuario(){
              
@@ -196,25 +189,14 @@ public class Crud {
                         rs.getInt("tamanho")
                  ) 
                       
-                   
-                
-             
                 ));
    
-                 
-      
             }/////////////////////////////////////
-            
-            
-            
-            
-        
+           
         
         }catch(SQLException e){
             
             System.err.println("Falha de operação!");
-        
-       
         
         }
         
