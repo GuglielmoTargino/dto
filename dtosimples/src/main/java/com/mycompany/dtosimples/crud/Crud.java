@@ -4,6 +4,7 @@
  */
 package com.mycompany.dtosimples.crud;
 import com.mycompany.dtosimples.entities.Calcado;
+import com.mycompany.dtosimples.dtos.Usuario;
 import java.sql.Connection;
 import com.mycompany.dtosimples.conexao.ConexaoBanco;
 import java.sql.PreparedStatement;
@@ -57,7 +58,6 @@ public class Crud {
     
     public void excluir(int id){
         
-        
         String sql="DELETE FROM calcado where id=?";
         
         try{
@@ -107,24 +107,12 @@ public class Crud {
              
              System.out.println("Item alterado com Sucessso!");
         
-        
-        
         }catch( SQLException e){
             
             System.err.println("Falha de operação!");
         
-        
         }
-    
-    
-    
-    
-    
     }
-    
-    
-    
- 
     
     
     public List<Calcado> buscar(){
@@ -132,17 +120,13 @@ public class Crud {
         List<Calcado> lista = new ArrayList<>();
         String sql = "SELECT * FROM calcado";
         
-        
-        
         try{
             
             Connection conn = ConexaoBanco.fazerConexao();
             PreparedStatement ps =conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             
-            
             while(rs.next()){
-                
                 
                 lista.add(new Calcado(
                         rs.getInt("id"),
@@ -157,12 +141,73 @@ public class Crud {
                     rs.getInt("estoque"),
                         rs.getInt("garantia"),
                         rs.getInt("tamanho")
-            
-                
+           
                 ));
                 
-      
             }
+        
+        }catch(SQLException e){
+            
+            System.err.println("Falha de operação!");
+        
+        }
+        
+    return lista;
+    
+    }
+    
+    
+    
+    
+    
+    
+    ///////////////////////////////////////////////////////////////////////
+    
+    
+    
+    public List<Usuario> buscarUsuario(){
+             
+        List<Usuario> listausu = new ArrayList<>();
+       
+        String sql = "SELECT * FROM calcado";
+
+        try{
+            
+            Connection conn = ConexaoBanco.fazerConexao();
+            PreparedStatement ps =conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            
+            
+            while(rs.next()){                
+                
+                 listausu.add(new Usuario(new Calcado(
+                         
+                                 rs.getInt("id"),
+                        rs.getString("nome"),
+                        rs.getString("modelo"),
+                        rs.getString("cor"),
+                        rs.getString("fabricante"),
+                        rs.getDouble("valorcompra"),
+                        rs.getDouble("valorvenda"),
+                        rs.getDouble("icms"),
+                        rs.getDouble("lucro"),
+                    rs.getInt("estoque"),
+                        rs.getInt("garantia"),
+                        rs.getInt("tamanho")
+                 ) 
+                      
+                   
+                
+             
+                ));
+   
+                 
+      
+            }/////////////////////////////////////
+            
+            
+            
+            
         
         
         }catch(SQLException e){
@@ -174,11 +219,9 @@ public class Crud {
         }
         
     
-    return lista;
+    return listausu;
     
     }
-    
-    
     
     
     

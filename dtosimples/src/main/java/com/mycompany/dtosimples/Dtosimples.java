@@ -5,6 +5,7 @@
 package com.mycompany.dtosimples;
 import com.mycompany.dtosimples.crud.Crud;
 import com.mycompany.dtosimples.entities.Calcado;
+import com.mycompany.dtosimples.dtos.Usuario;
 
 
 
@@ -19,14 +20,19 @@ public class Dtosimples {
     public static void main(String[] args) {
         
         Crud crud = new Crud();
+       
         
        Calcado calcado=new Calcado(1,"Botas","trabalho","preto","MTK",120.56,300.45,5.6,89.56,500,11,38);
         
+      
        //crud.inserir(calcado);
        
        //crud.excluir(1);
        
        //crud.atualizar(calcado);
+       
+       
+       /*
        
        crud.buscar().forEach(x->
                
@@ -55,10 +61,17 @@ public class Dtosimples {
                
       
      
-   
+   */
      
       
-       
+       crud.buscarUsuario().forEach(x->
+               
+               System.out.println(                      
+                       x.getNome()+x.getValorvenda()
+          
+               )
+ 
+       );
      
          
     }
