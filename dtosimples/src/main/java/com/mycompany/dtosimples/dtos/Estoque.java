@@ -9,26 +9,23 @@ import com.mycompany.dtosimples.entities.Calcado;
  *
  * @author GHT
  */
-public class Usuario {
-    
+public class Estoque {
     private String nome;
-    private Double valorvenda;
+    private int estoque;
 
-    public Usuario(Calcado c) {
+    public Estoque(Calcado c) {
         this.nome = c.getNome();
-        this.valorvenda = c.getValorVenda();
+        this.estoque = c.getEstoque();
+        
+   
     }
 
     public String getNome() {
         return nome;
     }
 
-    public Double getValorvenda() {
-        return valorvenda;
+    public int getEstoque() {
+        return estoque;
     }
-    
-  
-    
-    
     
 }

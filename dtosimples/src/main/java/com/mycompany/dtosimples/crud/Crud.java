@@ -4,7 +4,6 @@
  */
 package com.mycompany.dtosimples.crud;
 import com.mycompany.dtosimples.entities.Calcado;
-import com.mycompany.dtosimples.dtos.Usuario;
 import java.sql.Connection;
 import com.mycompany.dtosimples.conexao.ConexaoBanco;
 import java.sql.PreparedStatement;
@@ -12,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import com.mycompany.dtosimples.dtos.Usuario;
 
 
 
@@ -158,24 +158,25 @@ public class Crud {
    
     ///////////////////////////////////////////////////////////////////////
     
+    
+    
     public List<Usuario> buscarUsuario(){
-             
+        
         List<Usuario> listausu = new ArrayList<>();
-       
-        String sql = "SELECT * FROM calcado";
-
+        
+        String sql="SELECT * FROM calcado";
+        
         try{
-            
             Connection conn = ConexaoBanco.fazerConexao();
             PreparedStatement ps =conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             
             
-            while(rs.next()){                
+            while(rs.next()){
                 
-                 listausu.add(new Usuario(new Calcado(
-                         
-                                 rs.getInt("id"),
+                listausu.add(new Usuario(new Calcado(
+                        
+                        rs.getInt("id"),
                         rs.getString("nome"),
                         rs.getString("modelo"),
                         rs.getString("cor"),
@@ -187,29 +188,30 @@ public class Crud {
                     rs.getInt("estoque"),
                         rs.getInt("garantia"),
                         rs.getInt("tamanho")
-                 ) 
-                      
-                ));
-   
-            }/////////////////////////////////////
-           
+                
+                
+                
+                )));
+                
+            }
+        
+
+        
         
         }catch(SQLException e){
             
             System.err.println("Falha de operação!");
         
-        }
         
+        
+        
+        }
+    
+    
     
     return listausu;
     
     }
-    
-    
-    
-    
-    
-    
     
     
     

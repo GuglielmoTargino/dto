@@ -32,7 +32,7 @@ public class Dtosimples {
        //crud.atualizar(calcado);
        
        
-       /*
+      /*
        
        crud.buscar().forEach(x->
                
@@ -60,19 +60,19 @@ public class Dtosimples {
        );
                
       
-     
    */
      
       
-       crud.buscarUsuario().forEach(x->
-               
-               System.out.println(                      
-                       x.getNome()+x.getValorvenda()
-          
-               )
- 
-       );
+      crud.buscarUsuario().forEach(x->
+              
+              System.out.println(
+                      x.getNome()+x.getValorvenda()
+         
+              
+              )
+      
+      );
      
          
-    }
+    }//fim main aqui
 }
