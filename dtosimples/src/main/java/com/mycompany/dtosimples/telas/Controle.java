@@ -3,12 +3,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.dtosimples.telas;
+import com.mycompany.dtosimples.crud.Crud;
+import com.mycompany.dtosimples.dtos.Usuario;
+import com.mycompany.dtosimples.entities.Calcado;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author GHT
  */
 public class Controle extends javax.swing.JFrame {
+    
+    Crud crud = new Crud();
+    
+    
+    
+    
+    
+    
 
     /**
      * Creates new form Controle
@@ -42,6 +55,11 @@ public class Controle extends javax.swing.JFrame {
         lblID.setBounds(20, 20, 190, 70);
 
         txtID.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtID);
         txtID.setBounds(240, 20, 430, 70);
 
@@ -57,40 +75,31 @@ public class Controle extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Controle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Controle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Controle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Controle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
+        // TODO add your handling code here: 
+        
+          crud.buscarUsuario().forEach(x->
+                  System.out.println(x.getNome()+
+                          x.getValorvenda()
+                          
+                          txt.setString(x.)
+                  
+                  
+                  
+                  ));   
+        
+        
+        
+        
+    }//GEN-LAST:event_txtIDActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Controle().setVisible(true);
-            }
-        });
-    }
+    
+   
+          
+    
+        
+          
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;

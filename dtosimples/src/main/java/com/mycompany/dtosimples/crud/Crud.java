@@ -164,7 +164,7 @@ public class Crud {
         
         List<Usuario> listausu = new ArrayList<>();
         
-        String sql="SELECT * FROM calcado";
+        String sql="SELECT * FROM calcado where id=3";
         
         try{
             Connection conn = ConexaoBanco.fazerConexao();
