@@ -24,7 +24,7 @@ public class Controle extends javax.swing.JFrame {
     public Controle() {
         initComponents();
         
-         Crud crud = new Crud();
+       /*
          
          crud.buscarUsuario().forEach(x->{
              lblID.setText(x.getNome());
@@ -33,7 +33,7 @@ public class Controle extends javax.swing.JFrame {
          
          });
     
-      
+      */
     }
 
   
@@ -69,6 +69,7 @@ public class Controle extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -99,22 +100,22 @@ public class Controle extends javax.swing.JFrame {
         lblID2.setText("ID Produto");
         lblID2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(lblID2);
-        lblID2.setBounds(20, 60, 190, 20);
+        lblID2.setBounds(20, 60, 70, 20);
 
         lblID3.setText("ID Produto");
         lblID3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(lblID3);
-        lblID3.setBounds(20, 90, 190, 20);
+        lblID3.setBounds(20, 90, 140, 20);
 
         lblID4.setText("ID Produto");
         lblID4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(lblID4);
-        lblID4.setBounds(20, 120, 190, 20);
+        lblID4.setBounds(20, 120, 140, 20);
 
         lblID5.setText("ID Produto");
         lblID5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(lblID5);
-        lblID5.setBounds(20, 150, 190, 20);
+        lblID5.setBounds(20, 150, 140, 20);
 
         lblID6.setText("ID Produto");
         lblID6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -124,7 +125,7 @@ public class Controle extends javax.swing.JFrame {
         lblID7.setText("ID Produto");
         lblID7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(lblID7);
-        lblID7.setBounds(20, 180, 190, 20);
+        lblID7.setBounds(20, 180, 140, 20);
 
         lblID8.setText("ID Produto");
         lblID8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -162,7 +163,7 @@ public class Controle extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtID2);
-        txtID2.setBounds(220, 60, 90, 20);
+        txtID2.setBounds(110, 60, 60, 20);
 
         txtID3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtID3.addActionListener(new java.awt.event.ActionListener() {
@@ -171,7 +172,7 @@ public class Controle extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtID3);
-        txtID3.setBounds(220, 90, 90, 20);
+        txtID3.setBounds(190, 90, 90, 20);
 
         txtID4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtID4.addActionListener(new java.awt.event.ActionListener() {
@@ -180,7 +181,7 @@ public class Controle extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtID4);
-        txtID4.setBounds(220, 120, 90, 20);
+        txtID4.setBounds(190, 120, 90, 20);
 
         txtID5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtID5.addActionListener(new java.awt.event.ActionListener() {
@@ -189,7 +190,7 @@ public class Controle extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtID5);
-        txtID5.setBounds(220, 150, 90, 20);
+        txtID5.setBounds(190, 150, 90, 20);
 
         txtID6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtID6.addActionListener(new java.awt.event.ActionListener() {
@@ -207,7 +208,7 @@ public class Controle extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtID7);
-        txtID7.setBounds(220, 180, 90, 20);
+        txtID7.setBounds(190, 180, 90, 20);
 
         txtID8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtID8.addActionListener(new java.awt.event.ActionListener() {
@@ -250,6 +251,11 @@ public class Controle extends javax.swing.JFrame {
         jButton1.setBounds(190, 20, 75, 23);
 
         jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(20, 250, 75, 23);
 
@@ -261,6 +267,10 @@ public class Controle extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(230, 250, 75, 23);
 
+        jButton5.setText("jButton5");
+        getContentPane().add(jButton5);
+        jButton5.setBounds(190, 60, 75, 23);
+
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
@@ -269,7 +279,7 @@ public class Controle extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        setSize(new java.awt.Dimension(723, 492));
+        setSize(new java.awt.Dimension(723, 332));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -321,6 +331,25 @@ public class Controle extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtID11ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+
+
+        // TODO add your handling code here:
+        
+         
+         Calcado calcado=new Calcado(
+                 Integer.parseInt(txtID.getText()),
+                 txtID.getText(),"trabalho","preto",
+                 "MTK",120.56,300.45,5.6,
+                 89.56,500,11,38);
+         
+         Crud.inserir(calcado);
+      
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
  
    
     
@@ -335,6 +364,7 @@ public class Controle extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

@@ -1,21 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package com.mycompany.dtosimples;
 import com.mycompany.dtosimples.crud.Crud;
 import com.mycompany.dtosimples.entities.Calcado;
 import com.mycompany.dtosimples.telas.Controle;
 
-
-
-
-
-
-/**
- *
- * @author GHT
- */
 public class Dtosimples {
 
     public static void main(String[] args) {
@@ -38,10 +26,7 @@ public class Dtosimples {
       /*
        
        crud.buscar().forEach(x->
-               
-               
-               
-               
+      
                System.out.println(
                        x.getId()+" ID "+
                        x.getNome()+
@@ -55,30 +40,23 @@ public class Dtosimples {
                        x.getEstoque()+
                        x.getGarantia()+
                        x.getTamanho()
-      
-               
+ 
                )
     
-       
        );
                
-      
    */
-      
-      
-     
+    
       /*
       crud.buscarUsuario().forEach(x->
               
               System.out.println(
                       x.getNome()+x.getValorvenda()
          
-              
               )
       
       );
      */
-      
       
       tela.setVisible(true);
          
