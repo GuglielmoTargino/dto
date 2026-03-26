@@ -2,13 +2,11 @@
 package com.mycompany.dtosimples;
 import com.mycompany.dtosimples.crud.Crud;
 import com.mycompany.dtosimples.entities.Calcado;
-import com.mycompany.dtosimples.telas.Controle;
 
 public class Dtosimples {
 
     public static void main(String[] args) {
         
-        Controle tela = new Controle();
         
         Crud crud = new Crud();
        
@@ -47,7 +45,7 @@ public class Dtosimples {
                
    */
     
-      /*
+     
       crud.buscarUsuario().forEach(x->
               
               System.out.println(
@@ -56,9 +54,9 @@ public class Dtosimples {
               )
       
       );
-     */
+    
       
-      tela.setVisible(true);
+    
          
     }//fim main aqui
 }
