@@ -59,60 +59,67 @@ public class Controle extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("ID Produto");
         jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(50, 30, 90, 42);
+        jLabel1.setBounds(20, 20, 120, 42);
 
         txtID.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txtID);
-        txtID.setBounds(160, 40, 90, 22);
+        txtID.setBounds(150, 20, 70, 40);
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Nome Produto");
         jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(50, 90, 90, 42);
+        jLabel2.setBounds(20, 70, 120, 42);
 
         txtNome.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txtNome);
-        txtNome.setBounds(170, 100, 71, 22);
+        txtNome.setBounds(150, 70, 100, 40);
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Modelo Produto");
         jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(50, 150, 110, 42);
+        jLabel3.setBounds(20, 120, 120, 42);
 
         txtModelo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txtModelo);
-        txtModelo.setBounds(180, 160, 71, 22);
+        txtModelo.setBounds(150, 120, 100, 40);
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Cor Produto");
         jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 210, 110, 42);
+        jLabel4.setBounds(20, 170, 120, 42);
 
         txtCor.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txtCor);
-        txtCor.setBounds(180, 210, 71, 22);
+        txtCor.setBounds(150, 170, 100, 40);
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Fabricante Prod.");
         jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(50, 260, 110, 42);
+        jLabel5.setBounds(20, 220, 120, 42);
 
         txtFabricante.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txtFabricante);
-        txtFabricante.setBounds(180, 270, 71, 22);
+        txtFabricante.setBounds(150, 220, 100, 40);
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Valor Compra");
         jLabel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(50, 320, 110, 42);
+        jLabel6.setBounds(20, 270, 120, 42);
 
         txtCompra.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txtCompra);
-        txtCompra.setBounds(180, 330, 71, 22);
+        txtCompra.setBounds(150, 270, 100, 40);
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Valor Venda");
         jLabel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel7);
@@ -120,12 +127,13 @@ public class Controle extends javax.swing.JFrame {
 
         txtVenda.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txtVenda);
-        txtVenda.setBounds(550, 30, 71, 22);
+        txtVenda.setBounds(530, 30, 110, 40);
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("ICMS");
         jLabel8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(430, 80, 70, 42);
+        jLabel8.setBounds(430, 80, 90, 42);
 
         txtIcms.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtIcms.addActionListener(new java.awt.event.ActionListener() {
@@ -134,30 +142,33 @@ public class Controle extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtIcms);
-        txtIcms.setBounds(550, 80, 71, 22);
+        txtIcms.setBounds(530, 80, 110, 40);
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setText("Lucro");
         jLabel9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(430, 140, 70, 42);
+        jLabel9.setBounds(430, 140, 90, 42);
 
         txtLucro.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txtLucro);
-        txtLucro.setBounds(550, 130, 71, 22);
+        txtLucro.setBounds(530, 140, 110, 40);
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Estoque");
         jLabel10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(430, 190, 70, 42);
+        jLabel10.setBounds(430, 190, 90, 42);
 
         txtEstoque.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txtEstoque);
-        txtEstoque.setBounds(550, 180, 71, 22);
+        txtEstoque.setBounds(530, 190, 110, 40);
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel11.setText("Garantia");
         jLabel11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(430, 240, 70, 42);
+        jLabel11.setBounds(430, 240, 90, 42);
 
         txtGarantia.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         txtGarantia.addActionListener(new java.awt.event.ActionListener() {
@@ -166,29 +177,34 @@ public class Controle extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtGarantia);
-        txtGarantia.setBounds(540, 240, 71, 22);
+        txtGarantia.setBounds(530, 240, 110, 40);
 
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("Tamanho");
         jLabel12.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(430, 290, 70, 42);
+        jLabel12.setBounds(430, 290, 90, 42);
 
         txtTamanho.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         getContentPane().add(txtTamanho);
-        txtTamanho.setBounds(550, 300, 71, 22);
+        txtTamanho.setBounds(530, 290, 110, 40);
 
+        btnSalvar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSalvar.setText("Salvar");
         getContentPane().add(btnSalvar);
-        btnSalvar.setBounds(80, 410, 72, 23);
+        btnSalvar.setBounds(60, 360, 120, 50);
 
+        btnAlterar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnAlterar.setText("Alterar");
         getContentPane().add(btnAlterar);
-        btnAlterar.setBounds(240, 410, 72, 23);
+        btnAlterar.setBounds(270, 360, 130, 50);
 
+        btnExcluir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnExcluir.setText("Excluir");
         getContentPane().add(btnExcluir);
-        btnExcluir.setBounds(400, 410, 75, 23);
+        btnExcluir.setBounds(480, 360, 130, 50);
 
+        btnBuscarID.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnBuscarID.setText("BuscarID");
         btnBuscarID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,11 +212,12 @@ public class Controle extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnBuscarID);
-        btnBuscarID.setBounds(260, 40, 100, 23);
+        btnBuscarID.setBounds(230, 20, 100, 40);
 
+        btnBuscarNome.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnBuscarNome.setText("BuscarNome");
         getContentPane().add(btnBuscarNome);
-        btnBuscarNome.setBounds(260, 100, 100, 23);
+        btnBuscarNome.setBounds(260, 70, 115, 40);
 
         setBounds(0, 0, 701, 498);
     }// </editor-fold>//GEN-END:initComponents
@@ -220,6 +237,8 @@ public class Controle extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -252,6 +271,11 @@ public class Controle extends javax.swing.JFrame {
         });
     }
 
+    
+    
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAlterar;
     private javax.swing.JButton btnBuscarID;
