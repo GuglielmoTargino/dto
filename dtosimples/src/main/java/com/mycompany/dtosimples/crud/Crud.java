@@ -21,7 +21,7 @@ import com.mycompany.dtosimples.dtos.Usuario;
  */
 public class Crud {
     
-    public void inserir(Calcado c){
+    public static void inserir(Calcado c){
         
         String sql="INSERT INTO calcado VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
         

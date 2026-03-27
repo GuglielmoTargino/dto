@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.dtosimples.telas;
+import com.mycompany.dtosimples.crud.Crud;
+import com.mycompany.dtosimples.entities.Calcado;
 
 /**
  *
@@ -191,6 +193,11 @@ public class Controle extends javax.swing.JFrame {
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSalvar.setText("Salvar");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnSalvar);
         btnSalvar.setBounds(60, 360, 120, 50);
 
@@ -234,42 +241,36 @@ public class Controle extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBuscarIDActionPerformed
 
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+       
+
+            Calcado calcado=new Calcado(Integer.parseInt(txtID.getText()),
+                    txtNome.getText(),txtModelo.getText(),
+                    txtCor.getText(),txtFabricante.getText(),
+                    Double.parseDouble(txtCompra.getText()),
+                    Double.parseDouble(txtVenda.getText()),
+                    Double.parseDouble(txtIcms.getText()),
+                    Double.parseDouble(txtLucro.getText()),
+                    Integer.parseInt(txtEstoque.getText()),
+                    Integer.parseInt(txtGarantia.getText()),
+                    Integer.parseInt(txtTamanho.getText()));
+        
+        Crud.inserir(calcado);
+        
+        
+
+// TODO add your handling code here:
+
+
+
+
+    }//GEN-LAST:event_btnSalvarActionPerformed
+
     /**
      * @param args the command line arguments
      */
     
     
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Controle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Controle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Controle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Controle.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Controle().setVisible(true);
-            }
-        });
-    }
 
     
     
