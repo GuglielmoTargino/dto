@@ -239,6 +239,13 @@ public class Controle extends javax.swing.JFrame {
 
     private void btnBuscarIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarIDActionPerformed
         // TODO add your handling code here:
+        
+        Calcado cal = Crud.buscarCalcado();
+        txtNome.setText(cal.getNome());
+        txtCompra.setText(String.valueOf(cal.getValorCompra()));
+        
+       
+        
     }//GEN-LAST:event_btnBuscarIDActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed

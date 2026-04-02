@@ -160,9 +160,9 @@ public class Crud {
     
     
     
-    public List<Usuario> buscarUsuario(){
+    public static Calcado buscarCalcado(){
         
-        List<Usuario> listausu = new ArrayList<>();
+        Calcado cal = null;
         
         String sql="SELECT * FROM calcado where id=3";
         
@@ -172,9 +172,9 @@ public class Crud {
             ResultSet rs = ps.executeQuery();
             
             
-            while(rs.next()){
+           if(rs.next()){
                 
-                listausu.add(new Usuario(new Calcado(
+                cal= new Calcado(
                         
                         rs.getInt("id"),
                         rs.getString("nome"),
@@ -191,7 +191,7 @@ public class Crud {
                 
                 
                 
-                )));
+                );
                 
             }
         
@@ -201,15 +201,10 @@ public class Crud {
         }catch(SQLException e){
             
             System.err.println("Falha de operação!");
-        
-        
-        
-        
+            
         }
-    
-    
-    
-    return listausu;
+        
+    return cal;
     
     }
     

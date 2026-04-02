@@ -58,9 +58,14 @@ public class Dtosimples {
    */
     
       
-      /*
+     
    
-      crud.buscarUsuario().forEach(x->
+   
+    
+   
+  /*
+      
+          crud.buscarUsuario().forEach(x->
               
               System.out.println(
                       x.getNome()+x.getValorvenda()
@@ -68,9 +73,10 @@ public class Dtosimples {
               )
       
       );
-    
-   
-   */
+      
+      
+      
+      */
      
     
      
