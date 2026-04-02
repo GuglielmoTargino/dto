@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import com.mycompany.dtosimples.dtos.Usuario;
+import javax.swing.JOptionPane;
 
 
 
@@ -164,7 +165,7 @@ public class Crud {
         
         Calcado cal = null;
         
-        String sql="SELECT * FROM calcado where id=3";
+        String sql="SELECT * FROM calcado where id=30";
         
         try{
             Connection conn = ConexaoBanco.fazerConexao();
@@ -193,14 +194,18 @@ public class Crud {
                 
                 );
                 
-            }
+            }else{
+                 JOptionPane.showMessageDialog(null, "ID não encontrado");
+           }
         
 
         
         
         }catch(SQLException e){
             
-            System.err.println("Falha de operação!");
+           System.err.println("Falha de operação!");
+          
+            
             
         }
         
