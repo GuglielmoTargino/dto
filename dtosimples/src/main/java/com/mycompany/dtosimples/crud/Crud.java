@@ -161,16 +161,26 @@ public class Crud {
     
     
     
-    public static Calcado buscarCalcado(){
+    public static Calcado buscarCalcado(int id){
         
         Calcado cal = null;
         
-        String sql="SELECT * FROM calcado where id=30";
+        String sql="SELECT * FROM calcado where id=?";
         
         try{
             Connection conn = ConexaoBanco.fazerConexao();
             PreparedStatement ps =conn.prepareStatement(sql);
+              ps.setInt(1, id);
+            
+            
             ResultSet rs = ps.executeQuery();
+            
+          
+          
+            
+            
+            
+            
             
             
            if(rs.next()){
@@ -196,6 +206,7 @@ public class Crud {
                 
             }else{
                  JOptionPane.showMessageDialog(null, "ID não encontrado");
+                 cal =null;
            }
         
 

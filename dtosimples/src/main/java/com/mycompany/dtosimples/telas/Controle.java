@@ -240,9 +240,54 @@ public class Controle extends javax.swing.JFrame {
     private void btnBuscarIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarIDActionPerformed
         // TODO add your handling code here:
         
-        Calcado cal = Crud.buscarCalcado();
-        txtNome.setText(cal.getNome());
-        txtCompra.setText(String.valueOf(cal.getValorCompra()));
+        Calcado cal = Crud.buscarCalcado(Integer.parseInt(txtID.getText()));
+        
+        
+        
+        if(cal!=null){
+            
+            txtID.setText(String.valueOf(cal.getId()));
+            txtNome.setText(cal.getNome());        
+            txtModelo.setText(cal.getModelo());
+            txtCor.setText(cal.getCor());
+            txtFabricante.setText(cal.getFabricante());
+            txtCompra.setText(String.valueOf(cal.getValorCompra()));
+            txtVenda.setText(String.valueOf(cal.getValorVenda()));
+            txtIcms.setText(String.valueOf(cal.getIcms()));
+            txtLucro.setText(String.valueOf(cal.getLucro()));
+            txtEstoque.setText(String.valueOf(cal.getEstoque()));
+            txtGarantia.setText(String.valueOf(cal.getGarantia()));
+            txtTamanho.setText(String.valueOf(cal.getTamanho()));
+            
+            
+        
+        }else{
+            
+            txtID.setText(txtID.getText());
+            txtNome.setText("");        
+            txtModelo.setText("");
+            txtCor.setText("");
+            txtFabricante.setText("");
+            txtCompra.setText("");
+            txtVenda.setText("");
+            txtIcms.setText("");
+            txtLucro.setText("");
+            txtEstoque.setText("");
+            txtGarantia.setText("");
+            txtTamanho.setText("");
+        
+        
+
+        }
+        
+            
+            
+        
+       
+        
+        
+        
+        
         
        
         
