@@ -279,16 +279,6 @@ public class Controle extends javax.swing.JFrame {
         
 
         }
-        
-            
-            
-        
-       
-        
-        
-        
-        
-        
        
         
     }//GEN-LAST:event_btnBuscarIDActionPerformed

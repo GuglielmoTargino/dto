@@ -171,17 +171,8 @@ public class Crud {
             Connection conn = ConexaoBanco.fazerConexao();
             PreparedStatement ps =conn.prepareStatement(sql);
               ps.setInt(1, id);
-            
-            
+           
             ResultSet rs = ps.executeQuery();
-            
-          
-          
-            
-            
-            
-            
-            
             
            if(rs.next()){
                 
@@ -200,23 +191,16 @@ public class Crud {
                         rs.getInt("garantia"),
                         rs.getInt("tamanho")
                 
-                
-                
                 );
                 
             }else{
                  JOptionPane.showMessageDialog(null, "ID não encontrado");
                  cal =null;
            }
-        
-
-        
-        
+       
         }catch(SQLException e){
             
            System.err.println("Falha de operação!");
-          
-            
             
         }
         
