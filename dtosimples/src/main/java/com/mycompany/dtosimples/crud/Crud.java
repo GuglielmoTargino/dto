@@ -159,25 +159,26 @@ public class Crud {
    
     ///////////////////////////////////////////////////////////////////////
     
-    
-    
+   
     public static Calcado buscarCalcado(int id){
         
-        Calcado cal = null;
+        Calcado cal =null;
         
-        String sql="SELECT * FROM calcado where id=?";
+        String sql ="SELECT * FROM calcado WHERE ID=?";
         
         try{
+            
             Connection conn = ConexaoBanco.fazerConexao();
             PreparedStatement ps =conn.prepareStatement(sql);
-              ps.setInt(1, id);
-           
+            
+            ps.setInt(1, id);
+            
             ResultSet rs = ps.executeQuery();
             
-           if(rs.next()){
-                
-                cal= new Calcado(
-                        
+            if(rs.next()){
+            
+            cal =new Calcado(
+                       
                         rs.getInt("id"),
                         rs.getString("nome"),
                         rs.getString("modelo"),
@@ -190,28 +191,39 @@ public class Crud {
                     rs.getInt("estoque"),
                         rs.getInt("garantia"),
                         rs.getInt("tamanho")
-                
-                );
-                
+            
+            
+            
+            );
+            
+            
+            
+            
             }else{
-                 JOptionPane.showMessageDialog(null, "ID não encontrado");
-                 cal =null;
-           }
-       
+                JOptionPane.showMessageDialog(null,"ID Não Encontrado!");
+                cal=null;
+ 
+            
+            }
+            
+
+        
         }catch(SQLException e){
             
-           System.err.println("Falha de operação!");
-            
+            System.err.println("Falha de operação!");
+        
         }
         
-    return cal;
+   
+        return cal;
+    
     
     }
     
     
     
     
-    
+  
     
     
     

@@ -240,9 +240,7 @@ public class Controle extends javax.swing.JFrame {
     private void btnBuscarIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarIDActionPerformed
         // TODO add your handling code here:
         
-        Calcado cal = Crud.buscarCalcado(Integer.parseInt(txtID.getText()));
-        
-        
+        Calcado cal =Crud.buscarCalcado(Integer.parseInt(txtID.getText()));
         
         if(cal!=null){
             
@@ -258,11 +256,10 @@ public class Controle extends javax.swing.JFrame {
             txtEstoque.setText(String.valueOf(cal.getEstoque()));
             txtGarantia.setText(String.valueOf(cal.getGarantia()));
             txtTamanho.setText(String.valueOf(cal.getTamanho()));
-            
-            
-        
+ 
         }else{
-            
+        
+        
             txtID.setText(txtID.getText());
             txtNome.setText("");        
             txtModelo.setText("");
@@ -275,12 +272,13 @@ public class Controle extends javax.swing.JFrame {
             txtEstoque.setText("");
             txtGarantia.setText("");
             txtTamanho.setText("");
+ 
         
+        }
         
 
-        }
-       
         
+  //FIMCLASSE
     }//GEN-LAST:event_btnBuscarIDActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
