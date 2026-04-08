@@ -192,7 +192,7 @@ public class Controle extends javax.swing.JFrame {
         txtTamanho.setBounds(530, 290, 110, 40);
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnSalvar.setText("Salvar");
+        btnSalvar.setText("SALVAR");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalvarActionPerformed(evt);
@@ -213,6 +213,7 @@ public class Controle extends javax.swing.JFrame {
 
         btnBuscarID.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnBuscarID.setText("BuscarID");
+        btnBuscarID.setAlignmentY(0.0F);
         btnBuscarID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarIDActionPerformed(evt);

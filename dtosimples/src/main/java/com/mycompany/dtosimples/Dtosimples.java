@@ -8,11 +8,14 @@ public class Dtosimples {
 
     public static void main(String[] args) {
         
+        
+        
    
         
         Controle control = new Controle();
 
    control.setVisible(true);
+   
    
  
          
