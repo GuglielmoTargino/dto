@@ -197,7 +197,7 @@ public class Controle extends javax.swing.JFrame {
         txtTamanho.setBounds(530, 290, 110, 40);
 
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnSalvar.setText("SALVAR");
+        btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/botaosalvar1.png"))); // NOI18N
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalvarActionPerformed(evt);
@@ -217,7 +217,7 @@ public class Controle extends javax.swing.JFrame {
         btnExcluir.setBounds(480, 360, 130, 50);
 
         btnBuscarID.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnBuscarID.setText("BUSCARID");
+        btnBuscarID.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscarID.png"))); // NOI18N
         btnBuscarID.setAlignmentY(0.0F);
         btnBuscarID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,14 +228,14 @@ public class Controle extends javax.swing.JFrame {
         btnBuscarID.setBounds(230, 20, 100, 40);
 
         btnBuscarNome.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnBuscarNome.setText("BUSNOME");
+        btnBuscarNome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscarNome.png"))); // NOI18N
         btnBuscarNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarNomeActionPerformed(evt);
             }
         });
         getContentPane().add(btnBuscarNome);
-        btnBuscarNome.setBounds(260, 70, 99, 40);
+        btnBuscarNome.setBounds(260, 70, 106, 40);
 
         setBounds(0, 0, 701, 498);
     }// </editor-fold>//GEN-END:initComponents
@@ -320,7 +320,41 @@ public class Controle extends javax.swing.JFrame {
     private void btnBuscarNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarNomeActionPerformed
         // TODO add your handling code here:
         
-       
+       Calcado cal =Crud.buscarNome(txtNome.getText());
+        
+        if(cal!=null){
+            
+            txtID.setText(String.valueOf(cal.getId()));
+            txtNome.setText(cal.getNome());        
+            txtModelo.setText(cal.getModelo());
+            txtCor.setText(cal.getCor());
+            txtFabricante.setText(cal.getFabricante());
+            txtCompra.setText(String.valueOf(cal.getValorCompra()));
+            txtVenda.setText(String.valueOf(cal.getValorVenda()));
+            txtIcms.setText(String.valueOf(cal.getIcms()));
+            txtLucro.setText(String.valueOf(cal.getLucro()));
+            txtEstoque.setText(String.valueOf(cal.getEstoque()));
+            txtGarantia.setText(String.valueOf(cal.getGarantia()));
+            txtTamanho.setText(String.valueOf(cal.getTamanho()));
+ 
+        }else{
+        
+        
+            txtID.setText("");
+            txtNome.setText(txtNome.getText());        
+            txtModelo.setText("");
+            txtCor.setText("");
+            txtFabricante.setText("");
+            txtCompra.setText("");
+            txtVenda.setText("");
+            txtIcms.setText("");
+            txtLucro.setText("");
+            txtEstoque.setText("");
+            txtGarantia.setText("");
+            txtTamanho.setText("");
+ 
+        
+        }
    
         
     }//GEN-LAST:event_btnBuscarNomeActionPerformed

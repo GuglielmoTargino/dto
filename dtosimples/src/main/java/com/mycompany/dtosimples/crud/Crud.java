@@ -225,7 +225,65 @@ public class Crud {
     //////////////////////////////////
     
     
-  
+  public static Calcado buscarNome(String x){
+        
+        Calcado cal =null;
+        
+        String sql ="SELECT * FROM calcado WHERE TRIM(NOME)=?"; 
+        
+        try{
+            
+            Connection conn = ConexaoBanco.fazerConexao();
+            PreparedStatement ps =conn.prepareStatement(sql);
+            
+            ps.setString(1, x.trim());
+            
+            ResultSet rs = ps.executeQuery();
+            
+            if(rs.next()){
+            
+            cal =new Calcado(
+                       
+                        rs.getInt("id"),
+                        rs.getString("nome"),
+                        rs.getString("modelo"),
+                        rs.getString("cor"),
+                        rs.getString("fabricante"),
+                        rs.getDouble("valorcompra"),
+                        rs.getDouble("valorvenda"),
+                        rs.getDouble("icms"),
+                        rs.getDouble("lucro"),
+                    rs.getInt("estoque"),
+                        rs.getInt("garantia"),
+                        rs.getInt("tamanho")
+            
+            
+            
+            );
+            
+            
+            
+            
+            }else{
+                JOptionPane.showMessageDialog(null,"Nome Não Encontrado!");
+                cal=null;
+ 
+            
+            }
+            
+
+        
+        }catch(SQLException e){
+            
+            System.err.println("Falha de operação!");
+        
+        }
+        
+   
+        return cal;
+    
+    
+    }
     
     
     
