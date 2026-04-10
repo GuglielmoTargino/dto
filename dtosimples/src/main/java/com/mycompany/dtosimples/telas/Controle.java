@@ -78,6 +78,11 @@ public class Controle extends javax.swing.JFrame {
         jLabel2.setBounds(20, 70, 120, 42);
 
         txtNome.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtNome);
         txtNome.setBounds(150, 70, 100, 40);
 
@@ -202,17 +207,17 @@ public class Controle extends javax.swing.JFrame {
         btnSalvar.setBounds(60, 360, 120, 50);
 
         btnAlterar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnAlterar.setText("Alterar");
+        btnAlterar.setText("ALTERAR");
         getContentPane().add(btnAlterar);
         btnAlterar.setBounds(270, 360, 130, 50);
 
         btnExcluir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnExcluir.setText("Excluir");
+        btnExcluir.setText("EXCLUIR");
         getContentPane().add(btnExcluir);
         btnExcluir.setBounds(480, 360, 130, 50);
 
         btnBuscarID.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnBuscarID.setText("BuscarID");
+        btnBuscarID.setText("BUSCARID");
         btnBuscarID.setAlignmentY(0.0F);
         btnBuscarID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,9 +228,14 @@ public class Controle extends javax.swing.JFrame {
         btnBuscarID.setBounds(230, 20, 100, 40);
 
         btnBuscarNome.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnBuscarNome.setText("BuscarNome");
+        btnBuscarNome.setText("BUSNOME");
+        btnBuscarNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarNomeActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnBuscarNome);
-        btnBuscarNome.setBounds(260, 70, 115, 40);
+        btnBuscarNome.setBounds(260, 70, 99, 40);
 
         setBounds(0, 0, 701, 498);
     }// </editor-fold>//GEN-END:initComponents
@@ -306,6 +316,18 @@ public class Controle extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void btnBuscarNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarNomeActionPerformed
+        // TODO add your handling code here:
+        
+       
+   
+        
+    }//GEN-LAST:event_btnBuscarNomeActionPerformed
+
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeActionPerformed
 
     /**
      * @param args the command line arguments
