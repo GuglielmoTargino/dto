@@ -47,6 +47,7 @@ public class Crud {
              ps.executeUpdate();
              
              System.out.println("Cadastro com Sucesso!");
+             JOptionPane.showMessageDialog(null,"Item Cadastrado!");
            
         
         }catch(SQLException e){
@@ -57,7 +58,7 @@ public class Crud {
     
     }
     
-    public void excluir(int id){
+    public static void excluir(int id){
         
         String sql="DELETE FROM calcado where id=?";
         
@@ -71,12 +72,13 @@ public class Crud {
             ps.executeUpdate();
             
             System.out.println("Item excluido com sucesso!");
+            JOptionPane.showMessageDialog(null,"Item excluído");
         
         
         }catch(SQLException e){
             
             System.err.println("Falha de operação!");
-        
+            JOptionPane.showMessageDialog(null,"Item Não encontrado");
         
         }
 
