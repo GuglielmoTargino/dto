@@ -72,13 +72,13 @@ public class Crud {
             ps.executeUpdate();
             
             System.out.println("Item excluido com sucesso!");
-            JOptionPane.showMessageDialog(null,"Item excluído");
+            
         
         
         }catch(SQLException e){
             
             System.err.println("Falha de operação!");
-            JOptionPane.showMessageDialog(null,"Item Não encontrado");
+            
         
         }
 

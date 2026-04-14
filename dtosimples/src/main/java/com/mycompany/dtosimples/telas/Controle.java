@@ -373,7 +373,7 @@ public class Controle extends javax.swing.JFrame {
         
         
      
-        Crud.excluir(Integer.parseInt(txtID.getText()));
+      
         
         
     }//GEN-LAST:event_btnExcluirActionPerformed
