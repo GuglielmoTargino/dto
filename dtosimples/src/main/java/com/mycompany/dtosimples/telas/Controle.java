@@ -212,7 +212,7 @@ public class Controle extends javax.swing.JFrame {
         btnAlterar.setBounds(270, 360, 130, 50);
 
         btnExcluir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnExcluir.setText("EXCLUIR");
+        btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/excluir.png"))); // NOI18N
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExcluirActionPerformed(evt);
@@ -372,7 +372,7 @@ public class Controle extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         
-     
+     Crud.excluir(Integer.parseInt(txtID.getText()));
       
         
         

@@ -222,12 +222,7 @@ public class Crud {
     
     
     }
-    
-    
-    
-    //////////////////////////////////
-    
-    
+   
   public static Calcado buscarNome(String x){
         
         Calcado cal =null;
@@ -259,33 +254,23 @@ public class Crud {
                     rs.getInt("estoque"),
                         rs.getInt("garantia"),
                         rs.getInt("tamanho")
-            
-            
-            
+ 
             );
-            
-            
-            
-            
+       
             }else{
                 JOptionPane.showMessageDialog(null,"Nome Não Encontrado!");
                 cal=null;
- 
             
             }
-            
-
-        
+ 
         }catch(SQLException e){
             
             System.err.println("Falha de operação!");
         
         }
-        
-   
+
         return cal;
-    
-    
+
     }
     
     
@@ -314,6 +299,71 @@ public class Crud {
     
     
     
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     
     
     
