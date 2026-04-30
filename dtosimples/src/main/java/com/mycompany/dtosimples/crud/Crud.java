@@ -84,7 +84,7 @@ public class Crud {
 
     }
     
-    public void atualizar(Calcado c){
+    public static void atualizar(Calcado c){
         String sql="UPDATE calcado SET nome=?, modelo=?, cor=?, fabricante=?,"+
                 "valorcompra=?, valorvenda=?, icms=?, lucro=?, estoque=?, garantia=?,"
                 + " tamanho=? where id=?";

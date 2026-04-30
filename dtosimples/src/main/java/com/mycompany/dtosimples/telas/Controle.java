@@ -207,7 +207,12 @@ public class Controle extends javax.swing.JFrame {
         btnSalvar.setBounds(60, 360, 120, 50);
 
         btnAlterar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnAlterar.setText("ALTERAR");
+        btnAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/alterar.png"))); // NOI18N
+        btnAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlterarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnAlterar);
         btnAlterar.setBounds(270, 360, 130, 50);
 
@@ -377,6 +382,28 @@ public class Controle extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnExcluirActionPerformed
+
+    private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
+        // TODO add your handling code here:
+      Calcado calcado=new Calcado(Integer.parseInt(txtID.getText()),
+                    txtNome.getText(),txtModelo.getText(),
+                    txtCor.getText(),txtFabricante.getText(),
+                    Double.parseDouble(txtCompra.getText()),
+                    Double.parseDouble(txtVenda.getText()),
+                    Double.parseDouble(txtIcms.getText()),
+                    Double.parseDouble(txtLucro.getText()),
+                    Integer.parseInt(txtEstoque.getText()),
+                    Integer.parseInt(txtGarantia.getText()),
+                    Integer.parseInt(txtTamanho.getText()));
+        
+        Crud.atualizar(calcado);
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_btnAlterarActionPerformed
 
     /**
      * @param args the command line arguments
