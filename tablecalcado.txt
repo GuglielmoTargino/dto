@@ -1,0 +1,31 @@
+
+
+
+CREATE TABLE calcado(
+
+id number(2) CONSTRAINT pk_calcado PRIMARY KEY,
+
+nome char(20),
+modelo char(20),
+cor char(10),
+fabricante char(20),
+valorcompra number(6,2),
+valorvenda number(6,2),
+icms number(4,2),
+lucro number(4,2),
+estoque number(4),
+garantia number(2),
+tamanho number(2)
+
+);
+
+
+insert into calcado (
+1,'tenis', 'esporte','azul','mizuno',300.56,320.36,6.6,5.6,689,12,38);
+======================================================================
+
+
+
+
+
+
